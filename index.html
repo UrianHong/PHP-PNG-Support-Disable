@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="如何解决使用ThinkPHP框架开发网站不能正常显示验证码图片 : Mac笔记本上来后出现验证码不能正常显示Fatal error: Call to undefined function Think\imagettftext()...">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>如何解决使用ThinkPHP框架开发网站不能正常显示验证码图片</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/UrianHong/Php-Png-Support-Disable">View on GitHub</a>
+
+          <h1 id="project_title">如何解决使用ThinkPHP框架开发网站不能正常显示验证码图片</h1>
+          <h2 id="project_tagline">Mac笔记本上来后出现验证码不能正常显示Fatal error: Call to undefined function Think\imagettftext()...</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/UrianHong/Php-Png-Support-Disable/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/UrianHong/Php-Png-Support-Disable/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>初次使用ThinkPHP搭建而成的ThinkCMFX内容管理系统搭建网站时，创建完的项目后打开发现不能正常显示验证码图片。查看错误提示Fatal error: Call to undefined function Think\imagettftext()。后来发现原来是是因为MAC OSX 10.10 自带的PHP的GD库里缺少了PNG Support和FreeType Support，所以不能正常显示png图片。<br>
+解决办法如下:<br>
+在终端里输入以下代码<br>
+<code>curl -s http://php-osx.liip.ch/install.sh | bash -s 5.6</code><br>
+等待完成后就能再查看phpinfo时就发现GD库已经成功安装所需要的组件了，再打开网站发现验证码就能正常显示了。<br></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">如何解决使用ThinkPHP框架开发网站不能正常显示验证码图片 maintained by <a href="https://github.com/UrianHong">UrianHong</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
